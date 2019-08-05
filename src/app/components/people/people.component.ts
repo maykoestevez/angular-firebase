@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "../../../../node_modules/@angular/router";
 import { PeoplesService } from "../../services/peoples.service";
 import { HomeService } from '../../services/home.service';
+import { People } from 'src/app/models/people';
 
 @Component({
   selector: "app-people",
@@ -9,7 +10,7 @@ import { HomeService } from '../../services/home.service';
   styleUrls: ["./people.component.css"]
 })
 export class PeopleComponent implements OnInit {
-  public people: any;
+  public people: People;
 
   constructor(
     private activateRoute: ActivatedRoute,
@@ -18,12 +19,12 @@ export class PeopleComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.activateRoute.params.subscribe(({ id }) => {
-    //   this.peoplesService.getPeopleById(id).subscribe(data => {
-    //     console.log(data)
-    //     this.people = data;
-    //   });
-    // });
+    this.activateRoute.params.subscribe(({ id }) => {
+      this.peoplesService.getPeopleById(id).subscribe(data => {
+        console.log(data);
+        this.people = data;
+      });
+    });
     this.homeService.setActiveNav(true);
   }
 }
