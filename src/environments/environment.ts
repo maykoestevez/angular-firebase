@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyAbQ7Ev4pt-hbULm0jA0mFYxY51K4LzFvg',
-    authDomain: 'peopleinformation-efb14.firebaseapp.com',
-    databaseURL: 'https://peopleinformation-efb14.firebaseio.com',
-    projectId: 'peopleinformation-efb14',
-    storageBucket: 'peopleinformation-efb14.appspot.com',
-    messagingSenderId: '272525615827',
-    appId: '1:272525615827:web:96c737d8a9e8b0c6'
+    apiKey: "AIzaSyCVyImz0M_vdguYx5LzHzOXiZgarx2rPSg",
+    authDomain: "angular-class-e38ba.firebaseapp.com",
+    databaseURL: "https://angular-class-e38ba.firebaseio.com",
+    projectId: "angular-class-e38ba",
+    storageBucket: "angular-class-e38ba.appspot.com",
+    messagingSenderId: "861790280631",
+    appId: "1:861790280631:web:b51c023075d3d1fb"
   }
 };
 

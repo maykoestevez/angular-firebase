@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'people/:id', component: PeopleComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'addPeople', component: AddPeopleComponent},
+    {path: 'editPeople/:id', component: AddPeopleComponent},
     {path: '', pathMatch: 'full', redirectTo: 'login'}
 ]
 
