@@ -19,6 +19,7 @@ export class PeoplesComponent implements OnInit {
   ngOnInit() {
     this.peopleService.getPeoples().subscribe(data => {
       this.peoples = data;
+      console.log(this.peoples);
     });
     this.homeService.setActiveNav(true);
   }
