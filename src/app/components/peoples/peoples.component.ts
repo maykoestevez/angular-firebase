@@ -17,10 +17,19 @@ export class PeoplesComponent implements OnInit {
   constructor(private peopleService: PeoplesService, private homeService: HomeService) { }
 
   ngOnInit() {
+    this.getData();
+    this.homeService.setActiveNav(true);
+  }
+
+  private getData() {
     this.peopleService.getPeoples().subscribe(data => {
       this.peoples = data;
     });
-    this.homeService.setActiveNav(true);
+  }
+  delete(peopleId: string) {
+    this.peopleService.deletePeople(peopleId).then(() => {
+      this.getData();
+    }).catch((reason) =>  alert(reason));
   }
 
 }

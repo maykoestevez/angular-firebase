@@ -43,6 +43,13 @@ export class PeoplesService {
       );
   }
 
+  deletePeople(peopleId: string): Promise<void> {
+    return this.afs
+      .collection('peoples')
+      .doc(peopleId)
+      .delete();
+  }
+
   addPeople(people: People) {
     this.peopleCollection.add(people);
   }
